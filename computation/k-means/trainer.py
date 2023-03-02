@@ -116,5 +116,4 @@ def run(total, rent, country=None):
        
 
 if __name__ == "__main__":
-    # run(int(sys.argv[1]),int(sys.argv[2]),sys.argv[3])
-    run(1000,400,"Germany")
+    run(int(sys.argv[1]),int(sys.argv[2]),sys.argv[3])
