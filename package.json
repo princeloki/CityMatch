@@ -22,6 +22,7 @@
     "express": "^4.18.2",
     "matplotlib": "^1.0.0",
     "nodemon": "^2.0.20",
-    "python-shell": "^5.0.0"
+    "python-shell": "^5.0.0",
+    "vite": "^4.1.0"
   }
 }
