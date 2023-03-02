@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { BiUpArrowCircle } from 'react-icons/bi'
 import { axiosInstance } from '../config';
-// import axios from 'axios'
+import axios from 'axios'
 
 const Center = (props) => {
   const formRef = useRef(null);
@@ -67,7 +67,7 @@ const Center = (props) => {
 
     
     props.handleSecPop();
-    axiosInstance
+    axios
       .post("/cities", formData)
       .then(handleSuccess)
       .catch(handleError);
