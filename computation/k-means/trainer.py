@@ -19,7 +19,7 @@ def run(total, rent, country=None):
     if (country!="none"):
         
         root_dir = os.path.abspath(os.path.join(os.getcwd(), ".."))
-        data = pd.read_csv(root_dir+"/citymatch/computation/Countries/cost-of-living.csv")
+        data = pd.read_csv(root_dir+"/Countries/cost-of-living.csv")
         data = data.loc[data['Country'] == country]
         for x in data.index:
             if isinstance(data.loc[x, "Total($)"], str):
@@ -117,4 +117,5 @@ def run(total, rent, country=None):
        
 
 if __name__ == "__main__":
-    run(int(sys.argv[1]),int(sys.argv[2]),sys.argv[3])
+    # run(int(sys.argv[1]),int(sys.argv[2]),sys.argv[3])
+    run(1000,400,"Germany")
