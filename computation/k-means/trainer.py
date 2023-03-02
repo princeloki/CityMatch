@@ -67,7 +67,7 @@ def run(total, rent, country=None):
 
     else:
         root_dir = os.path.abspath(os.path.join(os.getcwd(), ".."))
-        data = pd.read_csv(root_dir+"/citymatch/computation/Countries/cost-of-living.csv")
+        data = pd.read_csv(root_dir+"app/computation/Countries/cost-of-living.csv")
         for x in data.index:
             if isinstance(data.loc[x, "Total($)"], str):
                 data.drop(x, inplace=False)
