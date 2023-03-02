@@ -1,13 +1,13 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "engines":{
+  "engines": {
     "node": "16.16.0"
   },
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "heroku-postbuild": "cd client && npm install  && npm run build"
   },
   "keywords": [],

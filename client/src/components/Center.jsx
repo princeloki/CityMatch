@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { BiUpArrowCircle } from 'react-icons/bi'
 import { axiosInstance } from '../config';
+// import axios from 'axios'
 
 const Center = (props) => {
   const formRef = useRef(null);
@@ -34,6 +35,7 @@ const Center = (props) => {
       }
     };
   }, []);
+
   const [error, setError] = useState("Enter")
   const [showError, setShowError] = useState(false)
   const [formData, setFormData] = useState({

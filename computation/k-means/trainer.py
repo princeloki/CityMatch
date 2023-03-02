@@ -1,4 +1,4 @@
-
+import os
 
 import pandas as pd
 import numpy as np
@@ -17,7 +17,9 @@ warnings.warn = warn
 
 def run(total, rent, country=None):
     if (country!="none"):
-        data = pd.read_csv("C:/Users/teriq/OneDrive/Documents/returntocoding/CityMatch/citymatch/server/computation/Countries/cost-of-living.csv")
+        
+        root_dir = os.path.abspath(os.path.join(os.getcwd(), ".."))
+        data = pd.read_csv(root_dir+"/citymatch/computation/Countries/cost-of-living.csv")
         data = data.loc[data['Country'] == country]
         for x in data.index:
             if isinstance(data.loc[x, "Total($)"], str):
@@ -65,7 +67,8 @@ def run(total, rent, country=None):
         print(json.dumps(result))
 
     else:
-        data = pd.read_csv("C:/Users/teriq/OneDrive/Documents/returntocoding/CityMatch/citymatch/server/computation/Countries/cost-of-living.csv")
+        root_dir = os.path.abspath(os.path.join(os.getcwd(), ".."))
+        data = pd.read_csv(root_dir+"/citymatch/computation/Countries/cost-of-living.csv")
         for x in data.index:
             if isinstance(data.loc[x, "Total($)"], str):
                 data.drop(x, inplace=False)
