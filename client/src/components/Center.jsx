@@ -85,7 +85,7 @@ const Center = (props) => {
   
     function handleError(err) {
       console.error(err);
-      showError("AN ERROR OCCURRED");
+      showError("OOPS! (check country)");
     }
   
     function showError(error) {
